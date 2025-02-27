@@ -1,0 +1,155 @@
+/* ImageConverter.css - Styling for the ImageConverter component */
+
+.converter-container {
+  background-color: white;
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  padding: 2rem;
+  width: 80%;
+  max-width: 500px;
+  text-align: center;
+}
+
+/* Cool file input styling */
+.file-input-container {
+  position: relative;
+  margin-bottom: 1.5rem;
+  width: 100%;
+}
+
+#imageInput {
+  width: 0.1px;
+  height: 0.1px;
+  opacity: 0;
+  overflow: hidden;
+  position: absolute;
+  z-index: -1;
+}
+
+.file-input-label {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #3498db;
+  color: white;
+  padding: 15px 20px;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  width: 100%;
+  box-sizing: border-box;
+  box-shadow: 0 4px 6px rgba(52, 152, 219, 0.2);
+}
+
+.file-input-label:hover {
+  background-color: #2980b9;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 8px rgba(52, 152, 219, 0.3);
+}
+
+.file-input-label:active {
+  transform: translateY(0);
+}
+
+.file-input-label::before {
+  content: "📁";
+  margin-right: 10px;
+  font-size: 1.2rem;
+}
+
+/* Convert button styling */
+.convert-btn {
+  background-color: #2ecc71;
+  color: white;
+  border: none;
+  padding: 15px 20px;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  width: 100%;
+  box-sizing: border-box;
+  box-shadow: 0 4px 6px rgba(46, 204, 113, 0.2);
+}
+
+.convert-btn:hover:not(:disabled) {
+  background-color: #27ae60;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 8px rgba(46, 204, 113, 0.3);
+}
+
+.convert-btn:active:not(:disabled) {
+  transform: translateY(0);
+}
+
+.convert-btn:disabled {
+  background-color: #95a5a6;
+  cursor: not-allowed;
+}
+
+.converting {
+  opacity: 0.8;
+  cursor: not-allowed;
+}
+
+/* File name display */
+.file-name {
+  margin-top: 10px;
+  font-size: 0.9rem;
+  color: #7f8c8d;
+  font-style: italic;
+}
+
+/* Custom filename input styling */
+.filename-input-container {
+  margin: 1.5rem 0;
+  width: 100%;
+}
+
+#customFileName {
+  width: 100%;
+  padding: 12px 15px;
+  border-radius: 8px;
+  border: 2px solid #bdc3c7;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+  box-sizing: border-box;
+}
+
+#customFileName:focus {
+  border-color: #3498db;
+  outline: none;
+  box-shadow: 0 0 5px rgba(52, 152, 219, 0.5);
+}
+
+/* Animation for the convert button */
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.convert-btn:focus:not(:disabled) {
+  animation: pulse 1s infinite;
+  outline: none;
+}
+
+/* Error message styling */
+.error-message {
+  margin-top: 15px;
+  color: #e74c3c;
+  font-size: 0.9rem;
+  padding: 10px;
+  border-radius: 5px;
+  background-color: rgba(231, 76, 60, 0.1);
+  border-left: 3px solid #e74c3c;
+  text-align: left;
+}
